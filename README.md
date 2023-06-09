@@ -1,9 +1,9 @@
 # my-touch-typing-app-
 Steps to set up the app:-
 
-step1- git init https://github.com/Vickykumarmishra/my-touch-typing-app-.git
+step1- git init 
 
-setp2- git clone 
+setp2- git clone https://github.com/Vickykumarmishra/my-touch-typing-app-.git
 
 step3- cd your repo (go into the folder inside which you have cloned the projects file) .
 
