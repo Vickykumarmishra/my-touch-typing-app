@@ -1,4 +1,4 @@
-# my-touch-typing-app-
+# my-touch-typing-app
 Steps to set up the app:-
 
 step1- git init 
