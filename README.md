@@ -7,7 +7,7 @@ setp2- git clone https://github.com/Vickykumarmishra/my-touch-typing-app.git
 
 step3- cd your repo (go into the folder inside which you have cloned the projects file) .
 
-       cd my-touch-typing-app-
+       cd my-touch-typing-app
        
        cd touch .
        
