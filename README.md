@@ -1,11 +1,11 @@
 # my-touch-typing-app-
 Steps to set up the app:-
 
-step1- git init
+step1- git init https://github.com/Vickykumarmishra/my-touch-typing-app-.git
 
 setp2- git clone 
 
-step3- cd your repo (go into the folder inside which you have cloned the projects file) . cd Touch-Typing-App-for-CHAABI then cd touch. ( by doing this you will reach into your project folder. their you need to install node modules(npm install) in step4).
+step3- cd your repo (go into the folder inside which you have cloned the projects file) .
 
 step4- npm install
 
