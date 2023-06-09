@@ -5,7 +5,7 @@ step1- git init
 
 setp2- git clone https://github.com/Vickykumarmishra/my-touch-typing-app.git
 
-step3- cd your repo (go into the folder inside which you have cloned the projects file) .
+step3-  (go into the folder inside which you have cloned the project files) .for this write below codes one by one in your vscode terminal.
 
        cd my-touch-typing-app
        
