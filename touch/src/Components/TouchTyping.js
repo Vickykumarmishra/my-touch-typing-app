@@ -63,15 +63,17 @@ const [play3] =useSound('click sound.mp3')
 
  
   const changeHandler = event => {
+    //this function get called whenever we will do any changes in textarea i.e onchange event.
     const { value } = event.target;
-    setwrittenText(value);
-    calculateAccuracy(text, value);
+    setwrittenText(value);//whatever i have written in yext field. it get stored in 'value'
+    calculateAccuracy(text, value);//function get called and text and value passed
     setkeyCounting(previousCounting => previousCounting + 1);
   };
 
   const calculateAccuracy = (originalText, writtenText) => {
-    const originalWords = originalText.trim().split(' ');
-    const typedWords = writtenText.trim().split(' ');
+    //originalText m text ka value a gaya and written text k textarea m likha hua vakue a gaya.
+    const originalWords = originalText.trim().split(' ');//the split() function depends on the delimiter you provide. In this case, using a space " " as the delimiter results in the string being split at each space, producing an array of words.
+    const typedWords = writtenText.trim().split(' ');//the trim() function removes the leading and trailing spaces.
     const originalLength = originalWords.length;
     let matchingWords = 0;
 
