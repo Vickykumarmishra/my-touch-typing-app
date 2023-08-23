@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState,createContext } from 'react'
 import { Link } from 'react-router-dom'
-import { user } from './Join'
+import { user } from '../App'
 import { motion } from 'framer-motion'
 import useSound from 'use-sound'
+import { contextdata } from '../App'
 
 export default function Navbar() {
 
- 
-  const [play]=useSound('loginsound.mp3')
+  const users=useContext(contextdata)
+
   return (
     <div>
       <nav className="navbar"  style={{backgroundColor:'#ef9273'}} >
@@ -19,12 +20,8 @@ export default function Navbar() {
 
 
     <div>
-    <Link to='/Join'><motion.button whileHover={{scale:1.1}} className='btn btn-primary' onClick={play} style={{backgroundColor:'#ef9273',color:'black',border:'0.1rem solid black'}}><b>SignUp</b></motion.button></Link>
-    </div>
-
-    <div>
     <img src='user.png' width='70' height='60' className="d-inline-block align-text-top"/>
-    <b><p style={{color:'black', fontStyle:'oblique'}}>username:-{user}</p></b>
+    <b><p style={{color:'black', fontStyle:'oblique'}}>username:{users}</p></b>
     </div>
     
   </div>
