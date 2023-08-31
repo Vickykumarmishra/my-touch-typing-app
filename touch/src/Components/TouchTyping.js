@@ -5,6 +5,11 @@ import { motion } from 'framer-motion';
 import useSound from 'use-sound';
 import { NavLink } from 'react-router-dom';
 
+import Swal from 'sweetalert2';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const TouchTyping = () => {
 
   let text='A data entry clerk is a member of staff employed to enter or update data into a computer system. Data is often entered into a computer from paper documents using a keyboard.';
@@ -41,7 +46,7 @@ it will be stop*/
 it will start showing remaining time in minus, if we will not stop the setInterval web api at remainingTime===0 in above line of code */
       //i will take my actions when the 1-minute window is completed
       alertsound()
-      alert('Practice session completed.  '+'accuracy='+ accuracy+'%.'+ ' no of key pressed ='+ keyCounting + ' RESET TEST TO PRACTICE AGAIN');
+      Swal.fire('Practice session completed.  '+'accuracy='+ accuracy+'%.'+ ' no of key pressed ='+ keyCounting + ' RESET TEST TO PRACTICE AGAIN')
     }
 
     return () => clearInterval(countdownInterval);
@@ -57,10 +62,31 @@ it will start showing remaining time in minus, if we will not stop the setInterv
 
   function setter() {
     //This function get called on clicking reset button. it is resetting the every values and also t-it erasing the texts written in textarea .
-    setAccuracy(0);
-    setkeyCounting(0);
-    setRemainingTime(60);
-    setwrittenText('');
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, reset it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        //on clicking 'yes reset it' button , result.isConfirmed set to true.
+        Swal.fire(
+          'Reset done!',
+          'Your file has been reset.',
+          'success',
+    setAccuracy(0),
+    setkeyCounting(0),
+    setRemainingTime(60),
+    setwrittenText(''),
+        )
+      }
+    })
+
+    
   }
 
   const changeHandler = event => {
@@ -99,7 +125,7 @@ it will start showing remaining time in minus, if we will not stop the setInterv
 
   return (
     <motion.div style={{ borderRadius: '0.5rem' 
-    }} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 4 }}>
+    }} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 4 }} >  
    
 
       <div
@@ -135,6 +161,7 @@ it will start showing remaining time in minus, if we will not stop the setInterv
       </motion.button>
 
       <NavLink to='/Newlesson'><motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273', marginLeft:'1rem'  }}  >New Lesson</motion.button></NavLink>
+      <ToastContainer/>
     </motion.div>
   );
 };

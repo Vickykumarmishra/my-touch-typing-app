@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {motion} from 'framer-motion'
 import useSound from 'use-sound';
+import Swal from 'sweetalert2';
+
+
 let emails;
 let user;//is variable ko agar function k andar rakhenge to ye export nahi ho payega
 export default function Join() {
@@ -14,7 +17,17 @@ export default function Join() {
       if(name==''||email==''){
         e.preventDefault()
         play();
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Some detais are missing. please fill it!',
+          footer: '<a href="">Why do I have this issue?</a>'
+        })
+
       }
+
+  
     }
     const [play] = useSound('error.mp3');
      
@@ -42,6 +55,7 @@ export default function Join() {
   
 </motion.div></center>
 
+ 
    </div>
   )
 }

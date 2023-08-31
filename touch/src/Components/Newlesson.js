@@ -4,6 +4,11 @@ import Footer from './Footer';
 import { motion } from 'framer-motion';
 import useSound from 'use-sound';
 
+import Swal from 'sweetalert2';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { user } from './Join';
 export default function Newlesson(){
 
@@ -33,7 +38,7 @@ export default function Newlesson(){
       
         // take your actions when the 5-minute window is completed
         alertsound()
-        alert('Practice session completed.  '+'accuracy='+ accuracy+'%.'+ ' no of key pressed ='+ keyCounting + ' RESET TEST TO PRACTICE AGAIN');
+        Swal.fire('Practice session completed.  '+'accuracy='+ accuracy+'%.'+ ' no of key pressed ='+ keyCounting + ' RESET TEST TO PRACTICE AGAIN');
       }
   
       return () => clearInterval(countdownInterval);
@@ -46,15 +51,33 @@ export default function Newlesson(){
     function stopTimer() {
       setIsTimerRunning(false);
     }
-    function resetalert(){
-      alert('CONGRATULATIONS! your test has been completed'+'your accuracy is:'+accuracy+'%')
-    }
+   
   
     function setter() {
-      setAccuracy(0);
-      setkeyCounting(0);
-      setRemainingTime(60);
-      setwrittenText('');
+      
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, reset it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          //on clicking 'yes reset it' button , result.isConfirmed set to true.
+          Swal.fire(
+            'Reset done!',
+            'Your file has been reset.',
+            'success',
+      setAccuracy(0),
+      setkeyCounting(0),
+      setRemainingTime(60),
+      setwrittenText(''),
+          )
+        }
+      })
+
     }
   
     const changeHandler = event => {
@@ -86,7 +109,10 @@ export default function Newlesson(){
     
     return(
         <motion.div style={{ borderRadius: '0.5rem' 
-    }} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 4 }}>
+    }} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 4 }} onLoad={ toast("Lesson changed successfully", 
+    { toastId: 'success1',}, 
+      // we need to give id to each toast, otherwise same toast will execute multiple times
+   {position: "top-center",autoClose: 9014,hideProgressBar: false,closeOnClick: true,pauseOnHover: true,draggable: true,progress: undefined,theme: "dark",})}>
    
 
       <div
@@ -121,7 +147,17 @@ export default function Newlesson(){
       <motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' }} onClick={setter} onFocus={play2}>
        Reset the Test
       </motion.button>
-      
+      <ToastContainer position="top-center"
+autoClose={9014}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"/>
+
     </motion.div>
     )
 }
