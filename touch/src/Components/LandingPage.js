@@ -16,7 +16,7 @@ export default function LandingPage() {
     backgroundImage: "url(/back1.jpg)",
     height:'100vh',
     marginTop:'-80px',
-    marginBottom:'-90px',
+   
     fontSize:'50px',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -29,13 +29,13 @@ export default function LandingPage() {
     <div style={myStyle}>
       <div className="container text-center"   style={{color:'#39395f',fontSize:'2rem',fontFamily:'tahoma',marginTop:'4rem'}}  >
 
-<div className='row'>
-  <div className='col'>
+<div className='row' >
+  <div className='col' >
 {/* <h1  style={{color:'#416a59'}}> <b >Typer's Friend </b></h1> */}
         {/*<h1  
          style={{color:'white',fontSize:'5rem',fontFamily:'tahoma',textShadow: '1px 1px 2px black, 0 0 25px yellow, 0 0 5px yellow'}} data-aos="fade-left"  data-aos-duration="2000">Vicky Kumar Mishra</h1> */}
 
-<b><Typewriter
+<b ><Typewriter 
       options={{
         strings: ['Typers Friend'],
         autoStart: true,
