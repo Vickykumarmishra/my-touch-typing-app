@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { user } from './Join';
+import { user } from './LandingPage';
 export default function Newlesson(){
 
     let text='India, a diverse nation of rich heritage, mesmerizes with its vibrant cultures, breathtaking landscapes, and historical wonders like the Taj Mahal. From bustling cities to serene Himalayan peaks, it is a tapestry of traditions and modernity. Experience its spicy cuisine, intricate traditions, and warm hospitality that leave an indelible mark on every traveler.'
@@ -108,6 +108,9 @@ export default function Newlesson(){
 
     
     return(
+
+      <>
+      <Navbar></Navbar>
         <motion.div style={{ borderRadius: '0.5rem' 
     }} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 4 }} onLoad={ toast("Lesson changed successfully", 
     { toastId: 'success1',}, 
@@ -159,5 +162,7 @@ pauseOnHover
 theme="dark"/>
 
     </motion.div>
+    <Footer></Footer>
+    </>
     )
 }

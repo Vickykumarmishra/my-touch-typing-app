@@ -11,7 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const TouchTyping = () => {
-
+  
   let text='A data entry clerk is a member of staff employed to enter or update data into a computer system. Data is often entered into a computer from paper documents using a keyboard.';
   const [keyCounting, setkeyCounting] = useState(0);
 
@@ -124,10 +124,12 @@ it will start showing remaining time in minus, if we will not stop the setInterv
   };
 
   return (
+    <>
+    <Navbar></Navbar>
     <motion.div style={{ borderRadius: '0.5rem' 
     }} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 4 }} >  
    
-
+ 
       <div
         whileHover={{ scale: 1.1 }} className="container text-center " style={{ backgroundImage:
           'url("https://images.unsplash.com/photo-1537147347432-676815edd56c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTc3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60")',paddingTop: '0.5rem',paddingBottom: '0.5rem',  marginTop: '2.5rem', borderRadius: '0.5rem'}}
@@ -163,6 +165,8 @@ it will start showing remaining time in minus, if we will not stop the setInterv
       <NavLink to='/Newlesson'><motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273', marginLeft:'1rem'  }}  >New Lesson</motion.button></NavLink>
       <ToastContainer/>
     </motion.div>
+    <Footer></Footer>
+    </>
   );
 };
 export default TouchTyping;
