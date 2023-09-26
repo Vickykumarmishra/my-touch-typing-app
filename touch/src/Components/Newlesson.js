@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
 import useSound from 'use-sound';
-
+import TouchTyping from './TouchTyping';
 import Swal from 'sweetalert2';
 
 import { ToastContainer, toast } from 'react-toastify';
