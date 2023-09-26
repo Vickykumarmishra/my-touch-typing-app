@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="navbar"  style={{backgroundColor:'#ef9273'}} >
+      <nav className="navbar relative"  style={{backgroundColor:'#ef9273'}} >
   <div className="container-fluid"  >
     <Link to='#' className="navbar-brand" >
       <img src="key.png" alt="Logo" width="70" height="50" className="d-inline-block align-text-top" style={{color:'#ef9273',border:'0.1rem solid black',borderRadius:'0.2rem'}}/>
