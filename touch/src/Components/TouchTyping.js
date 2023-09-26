@@ -161,6 +161,7 @@ it will start showing remaining time in minus, if we will not stop the setInterv
        Reset the Test
       </motion.button>
 
+
       <NavLink to='/Newlesson'><motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273', marginLeft:'1rem'  }}  >New Lesson</motion.button></NavLink>
       <ToastContainer/>
     </motion.div>
