@@ -15,19 +15,12 @@ const contextdata=createContext()
 
 function App() {
   
-  const [isLoading, setLoading] = useState(true);
-  useEffect(() => {
-    // Simulate data fetching or initialization
-    setTimeout(() => {
-      setLoading(false); // Set loading to false when done
-    }, 3000); // Adjust the timeout as needed
-  }, []);
+  
   return (
+
+   
     <div className="App" >
-      <BrowserRouter>
-    {isLoading?(<LoadingSpinner/>):(null)}
-
-
+ <BrowserRouter>
 <Routes>
   <Route path='/' element={<LandingPage/>}></Route>
   <Route path='/TouchTyping' element={<TouchTyping/>}></Route>
@@ -37,10 +30,10 @@ function App() {
   <Route path="/LoadingSpinner" element={<LoadingSpinner/>}></Route>
 </Routes>
 
-
-
-
 </BrowserRouter> 
+
+
+
     </div>
   );
 }

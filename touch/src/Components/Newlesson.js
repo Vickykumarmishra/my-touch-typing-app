@@ -150,9 +150,9 @@ export default function Newlesson(){
       <motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' ,marginLeft:"1rem"}} onClick={setter} onFocus={play2}>
        Reset the Test
       </motion.button>
-      {/* <NavLink to='/TouchTyping'><motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' ,marginLeft:'1rem'}}>
+      <NavLink to='/TouchTyping'><motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' ,marginLeft:'1rem'}}>
        Previous Lesson
-      </motion.button></NavLink> */}
+      </motion.button></NavLink>
       <ToastContainer position="top-center"
 autoClose={9014}
 hideProgressBar={false}

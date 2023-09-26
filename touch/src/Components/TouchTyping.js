@@ -4,7 +4,7 @@ import Footer from './Footer';
 import { motion } from 'framer-motion';
 import useSound from 'use-sound';
 import { NavLink } from 'react-router-dom';
-import Newlesson from './Newlesson';
+
 import Swal from 'sweetalert2';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -160,7 +160,6 @@ it will start showing remaining time in minus, if we will not stop the setInterv
       <motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' ,marginLeft:"1rem"}} onClick={setter} onFocus={play2}>
        Reset the Test
       </motion.button>
-
 
       <NavLink to='/Newlesson'><motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273', marginLeft:'1rem'  }}  >New Lesson</motion.button></NavLink>
       <ToastContainer/>
