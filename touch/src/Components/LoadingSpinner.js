@@ -17,7 +17,7 @@ export default function LoadingSpinner() {
   return (
     <div style={myStyle}>
       
-      <div id="spinner" className="spinner-grow text-warning" style={{width: '4rem', height: '5rem', role:"status",borderRadius:'50%' ,color:'white',marginTop:"50vh"}}>
+      <div id="spinner" className="spinner-grow text-warning" style={{width: '4rem', height: '5rem', role:"status",borderRadius:'100%' ,color:'white',marginTop:"48vh"}}>
   <span className="visually-hidden" style={{color:'white'}}>Loading...</span>
 </div>
 
