@@ -9,10 +9,12 @@ import LoadingSpinner from './Components/LoadingSpinner';
 import { Route,Routes,BrowserRouter } from 'react-router-dom';
 import Newlesson from './Components/Newlesson';
 import { createContext } from 'react';
+import LandingPage from './Components/LandingPage';
 const contextdata=createContext()
 
 
 function App() {
+  
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
     // Simulate data fetching or initialization
@@ -22,21 +24,23 @@ function App() {
   }, []);
   return (
     <div className="App" >
-    
-   
-  <BrowserRouter>
+      <BrowserRouter>
+    {isLoading?(<LoadingSpinner/>):(null)}
+
 
 <Routes>
-  <Route path='/' element={<Join/>}></Route>
+  <Route path='/' element={<LandingPage/>}></Route>
   <Route path='/TouchTyping' element={<TouchTyping/>}></Route>
-  <Route path='/Join' element={<Join/>}></Route>
+  
   <Route path='/Newlesson' element={<Newlesson/>}></Route>
   <Route path='/Navbar' element={<Navbar/>}></Route>
   <Route path="/LoadingSpinner" element={<LoadingSpinner/>}></Route>
 </Routes>
 
-</BrowserRouter> 
 
+
+
+</BrowserRouter> 
     </div>
   );
 }

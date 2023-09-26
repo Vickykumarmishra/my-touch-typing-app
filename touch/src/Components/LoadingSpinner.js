@@ -1,5 +1,5 @@
 import React from 'react'
-
+import TouchTyping from './TouchTyping';
 export default function LoadingSpinner() {
 
     const myStyle={
