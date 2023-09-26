@@ -70,7 +70,7 @@ export default function LandingPage() {
       }}
      
     /></p></b>
-    {isAuthenticated?<motion.button style={{marginTop:'25rem'}} whileHover={{scale:1.1}} className="btn btn-light" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } }) }> <b>Log Out</b></motion.button>: <motion.button  whileHover={{scale:1.1}}  className="btn btn-light" style={{marginTop:'20rem',backgroundColor:"#ef9273"}} onClick={() =>loginWithRedirect() }><b>SignUp/LogIn</b></motion.button>}  
+    {isAuthenticated?<motion.button style={{marginTop:'25rem'}} whileHover={{scale:1.1}} className="btn btn-light" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } }) }> <b>Log Out</b></motion.button>: <motion.button  whileHover={{scale:1.1}}  className="btn btn-light" style={{marginTop:'20rem',backgroundColor:"white"}} onClick={() =>loginWithRedirect() }><b>SignUp/LogIn</b></motion.button>}  
 
 {isAuthenticated && navigate('/TouchTyping')} 
 
