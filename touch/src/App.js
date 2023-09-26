@@ -23,11 +23,9 @@ function App() {
   return (
     <div className="App" >
     
-    {isLoading?(<LoadingSpinner/>):(
+   
   <BrowserRouter>
-<contextdata.Provider >
- 
-  </contextdata.Provider>
+
 <Routes>
   <Route path='/' element={<Join/>}></Route>
   <Route path='/TouchTyping' element={<TouchTyping/>}></Route>
@@ -38,7 +36,7 @@ function App() {
 </Routes>
 
 </BrowserRouter> 
-)}
+
     </div>
   );
 }
