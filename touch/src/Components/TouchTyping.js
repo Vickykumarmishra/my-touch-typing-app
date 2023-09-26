@@ -4,7 +4,7 @@ import Footer from './Footer';
 import { motion } from 'framer-motion';
 import useSound from 'use-sound';
 import { NavLink } from 'react-router-dom';
-
+import Newlesson from './Newlesson';
 import Swal from 'sweetalert2';
 
 import { ToastContainer, toast } from 'react-toastify';
