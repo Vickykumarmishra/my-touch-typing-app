@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
 import { motion } from 'framer-motion'
 import useSound from 'use-sound'
-import { contextdata } from '../App'
+
 import TouchTyping from './TouchTyping';
 export default function Navbar() {
    
@@ -15,7 +15,7 @@ export default function Navbar() {
   const {user}=useAuth0();
   const navigate=useNavigate();
 
-  const users=useContext(contextdata)
+ 
 
   return (
     <div>

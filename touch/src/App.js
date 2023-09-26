@@ -15,28 +15,27 @@ const contextdata=createContext()
 
 function App() {
   
-  
+ 
   return (
-
-   
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <div className="App" >
- <BrowserRouter>
+    
+
+
 <Routes>
   <Route path='/' element={<LandingPage/>}></Route>
   <Route path='/TouchTyping' element={<TouchTyping/>}></Route>
   
-  <Route path='/Newlesson' element={<Newlesson/>}></Route>
+  <Route path="Newlesson" element={<Newlesson/>}></Route>
   <Route path='/Navbar' element={<Navbar/>}></Route>
   <Route path="/LoadingSpinner" element={<LoadingSpinner/>}></Route>
+  <Route path="/Footer" element={<Footer/>}></Route>
 </Routes>
 
-</BrowserRouter> 
 
 
-
-    </div>
+    </div></BrowserRouter> 
   );
 }
 
 export default App;
-export {contextdata}

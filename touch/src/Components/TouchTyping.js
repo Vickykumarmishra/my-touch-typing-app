@@ -3,8 +3,8 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
 import useSound from 'use-sound';
-import { NavLink } from 'react-router-dom';
-
+import { NavLink,Link } from 'react-router-dom';
+import Newlesson from './Newlesson';
 import Swal from 'sweetalert2';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -124,7 +124,7 @@ it will start showing remaining time in minus, if we will not stop the setInterv
   };
 
   return (
-    <>
+    <div>
     <Navbar></Navbar>
     <motion.div style={{ borderRadius: '0.5rem' 
     }} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 4 }} >  
@@ -157,15 +157,16 @@ it will start showing remaining time in minus, if we will not stop the setInterv
         <p style={{ color: '#ef9273', marginTop: '1rem' }}>Remaining Time: {remainingTime} seconds | Accuracy: {accuracy}% | No of keys pressed: {keyCounting} </p>
       </b>
     
-      <motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' ,marginLeft:"1rem"}} onClick={setter} onFocus={play2}>
+      <motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' }} onClick={setter} onFocus={play2}>
        Reset the Test
       </motion.button>
 
-      <NavLink to='/Newlesson'><motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273', marginLeft:'1rem'  }}  >New Lesson</motion.button></NavLink>
-      <ToastContainer/>
+      <NavLink to='/Newlesson' className="btn btn-primary" style={{backgroundColor:"#ef9273",marginLeft:'1rem'}}>Next lesson</NavLink>
     </motion.div>
+    
     <Footer></Footer>
-    </>
+    <ToastContainer/>
+    </div>
   );
 };
 export default TouchTyping;
