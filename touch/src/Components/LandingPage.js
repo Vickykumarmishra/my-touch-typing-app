@@ -4,6 +4,7 @@ import Typewriter from 'typewriter-effect';
 import { useNavigate } from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
 import { motion } from 'framer-motion';
+import TouchTyping from './TouchTyping';
 export default function LandingPage() {
  
   const { loginWithRedirect } = useAuth0();
