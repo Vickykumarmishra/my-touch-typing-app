@@ -10,6 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { user } from './LandingPage';
+import { NavLink } from 'react-router-dom';
 export default function Newlesson(){
 
     let text='India, a diverse nation of rich heritage, mesmerizes with its vibrant cultures, breathtaking landscapes, and historical wonders like the Taj Mahal. From bustling cities to serene Himalayan peaks, it is a tapestry of traditions and modernity. Experience its spicy cuisine, intricate traditions, and warm hospitality that leave an indelible mark on every traveler.'
@@ -119,8 +120,7 @@ export default function Newlesson(){
    
 
       <div
-        whileHover={{ scale: 1.1 }} className="container text-center " style={{ backgroundImage:
-          'url("https://images.unsplash.com/photo-1537147347432-676815edd56c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTc3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60")',paddingTop: '0.5rem',paddingBottom: '0.5rem',  marginTop: '2.5rem', borderRadius: '0.5rem'}}
+        whileHover={{ scale: 1.1 }} className="container text-center " style={{paddingTop: '0.5rem',paddingBottom: '0.5rem',  marginTop: '2.5rem', borderRadius: '0.5rem'}}
       >
         <div class="row">
           <div class="col">
@@ -147,9 +147,12 @@ export default function Newlesson(){
       </b>
     
 
-      <motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' }} onClick={setter} onFocus={play2}>
+      <motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' ,marginLeft:"1rem"}} onClick={setter} onFocus={play2}>
        Reset the Test
       </motion.button>
+      <NavLink to='/TouchTyping'><motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' ,marginLeft:'1rem'}}>
+       Previous Lesson
+      </motion.button></NavLink>
       <ToastContainer position="top-center"
 autoClose={9014}
 hideProgressBar={false}

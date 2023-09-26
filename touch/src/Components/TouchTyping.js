@@ -131,8 +131,7 @@ it will start showing remaining time in minus, if we will not stop the setInterv
    
  
       <div
-        whileHover={{ scale: 1.1 }} className="container text-center " style={{ backgroundImage:
-          'url("https://images.unsplash.com/photo-1537147347432-676815edd56c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTc3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60")',paddingTop: '0.5rem',paddingBottom: '0.5rem',  marginTop: '2.5rem', borderRadius: '0.5rem'}}
+        whileHover={{ scale: 1.1 }} className="container text-center " style={{ paddingTop: '0.5rem',paddingBottom: '0.5rem',  marginTop: '2.5rem', borderRadius: '0.5rem'}}
       >
         <div class="row">
           <div class="col">
@@ -158,7 +157,7 @@ it will start showing remaining time in minus, if we will not stop the setInterv
         <p style={{ color: '#ef9273', marginTop: '1rem' }}>Remaining Time: {remainingTime} seconds | Accuracy: {accuracy}% | No of keys pressed: {keyCounting} </p>
       </b>
     
-      <motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' }} onClick={setter} onFocus={play2}>
+      <motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' ,marginLeft:"1rem"}} onClick={setter} onFocus={play2}>
        Reset the Test
       </motion.button>
 
