@@ -157,12 +157,12 @@ it will start showing remaining time in minus, if we will not stop the setInterv
         <p style={{ color: '#ef9273', marginTop: '1rem' }}>Remaining Time: {remainingTime} seconds | Accuracy: {accuracy}% | No of keys pressed: {keyCounting} </p>
       </b>
     
-    
+
       <motion.button whileHover={{ scale: 1.1 }} className="btn  btn-danger" style={{ backgroundColor: '#ef9273' }} onClick={setter} onFocus={play2}>
        Reset the Test
       </motion.button>
 
-      <NavLink to='/Newlesson' className="btn btn-primary" style={{backgroundColor:"#ef9273",marginLeft:'1rem'}}>Next lesson</NavLink>
+      <NavLink to='/Newlesson'> <button className='btn btn-primary' style={{backgroundColor:"#ef9273",marginLeft:'1rem'}}>Next lesson</button></NavLink>
     </motion.div>
     
     <Footer></Footer>
