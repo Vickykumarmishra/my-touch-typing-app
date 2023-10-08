@@ -5,7 +5,7 @@ import TouchTyping from './Components/TouchTyping';
 import Join from './Components/LandingPage';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
-import LoadingSpinner from './Components/LoadingSpinner';
+
 import { Route,Routes,BrowserRouter } from 'react-router-dom';
 import Newlesson from './Components/Newlesson';
 import { createContext } from 'react';
@@ -17,10 +17,10 @@ function App() {
   
  
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    
     <div className="App" >
     
-
+    <BrowserRouter>
 
 <Routes>
   <Route path='/' element={<LandingPage/>}></Route>
@@ -32,9 +32,9 @@ function App() {
   <Route path="/Footer" element={<Footer/>}></Route>
 </Routes>
 
+</BrowserRouter> 
 
-
-    </div></BrowserRouter> 
+    </div>
   );
 }
 
